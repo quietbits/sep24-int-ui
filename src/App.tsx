@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Button, Display, Input, Text } from "@stellar/design-system";
 import { Box } from "@/components/Box";
 
-import anchorLogoSrc from "@/assets/anchor-logo.svg";
-import assetUsdcIconSrc from "@/assets/asset-usdc.svg";
-import assetXlmIconSrc from "@/assets/asset-xlm.svg";
+import anchorLogoSrc from "/anchor-logo.svg";
+import assetUsdcIconSrc from "/asset-usdc.svg";
+import assetXlmIconSrc from "/asset-xlm.svg";
 
 const ASSET_ICON: { [key: string]: string } = {
   XLM: assetXlmIconSrc,
@@ -40,10 +40,6 @@ function App() {
   const [txAddress] = useState("CAHM5N4X6RCDT5GPP4WBHWC7LIHDS2KUMDE4U66LKPZF3PFQ2LDU7ENH");
   // .amount_in
   const [amountIn] = useState("1");
-  // .amount_in_asset (stellar:USDC:GDQOE23CFSUMSVQK4Y5JHPPYK73VYCNHZHA7ENKCV37P6SUEO6XQBKPP)
-  const [amountInAsset] = useState(
-    getAssetCode("stellar:USDC:GDQOE23CFSUMSVQK4Y5JHPPYK73VYCNHZHA7ENKCV37P6SUEO6XQBKPP"),
-  );
   // .amount_out
   const [amountOut] = useState("0.9");
   // .amount_out_asset (stellar:USDC:GDQOE23CFSUMSVQK4Y5JHPPYK73VYCNHZHA7ENKCV37P6SUEO6XQBKPP)
@@ -177,7 +173,7 @@ function App() {
 
       <Box gap="md" align="center">
         <Display as="div" size="sm" weight="medium">
-          {`${Number(amountIn).toFixed(2)} ${amountInAsset}`}
+          {`${Number(amountIn).toFixed(2)} USD`}
         </Display>
 
         <div className="Badge Badge--tertiary Badge--md">
