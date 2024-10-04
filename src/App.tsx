@@ -53,11 +53,11 @@ function App() {
       };
 
       fetchTx().then((res) => {
-        if (res.destination_account && res.amount_in.amount && res.amount_out.amount && res.amount_out.asset) {
+        if (res.destination_account && res.amount_expected.amount && res.amount_expected.asset) {
           setTxAddress(res.destination_account);
-          setAmountIn(res.amount_in.amount);
-          setAmountOut(res.amount_out.amount);
-          setAmountOutAsset(getAssetCode(res.amount_out.asset));
+          setAmountIn(res.amount_expected.amount);
+          setAmountOut(res.amount_expected.amount);
+          setAmountOutAsset(getAssetCode(res.amount_expected.asset));
         }
       });
     } catch (e) {
