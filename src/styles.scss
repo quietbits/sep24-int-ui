@@ -1,0 +1,48 @@
+#root {
+  .Display {
+    font-size: var(--Heading-font-size);
+  }
+
+  .Badge {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+
+    img {
+      display: block;
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.App {
+  width: 400px;
+  height: 620px;
+  margin: 0 auto;
+  padding: 32px;
+  color: var(--sds-clr-gray-11);
+
+  &__header {
+    img {
+      display: block;
+      width: 96px;
+      height: 97px;
+    }
+  }
+
+  &__message {
+    max-width: 260px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .Display {
+    color: var(--sds-clr-gray-12);
+  }
+
+  &__footer {
+    flex: 1;
+  }
+}
